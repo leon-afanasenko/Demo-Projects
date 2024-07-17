@@ -1,0 +1,124 @@
+body {
+  background-color: #000;
+  font-family: monospace;
+  overflow: hidden;
+}
+
+#court {
+  width: 1600px; /* ширина корта */
+  height: 600px; /* высота корта */
+  background-color: #000;
+  position: relative;
+  margin: 50px auto;
+  border: 10px solid white; /* толщина границы */
+  box-sizing: content-box;
+  box-shadow: 0 0 40px rgb(255, 0, 157), 0 0 80px rgb(255, 0, 238),
+    0 0 120px white; /* размеры тени */
+}
+
+#score {
+  color: #fff;
+  text-align: center;
+  font-size: 40px; /* размер шрифта */
+  margin-bottom: 40px; /* отступ */
+}
+
+.net {
+  width: 4px; /* ширина сетки */
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  border-right: 4px dashed #00f; /* ширина пунктирной линии */
+}
+
+.player {
+  width: 20px; /* ширина ракетки */
+  height: 120px; /* высота ракетки */
+  background-color: #fff;
+  position: absolute;
+}
+
+#player1 {
+  left: 40px; /*  отступ от левого края */
+  top: 240px; /* отступ от верхнего края */
+}
+
+#player2 {
+  right: 40px; /* отступ от правого края */
+  top: 240px; /* отступ от верхнего края */
+}
+
+#ball {
+  width: 30px; /* размер мяча */
+  height: 30px; /* размер мяча */
+  background-color: #ff0;
+  border-radius: 50%;
+  position: absolute;
+  left: 785px; /* мяч относительно нового размера корта */
+  top: 285px;
+  box-shadow: 0 0 20px #ff0; /*  размер тени мяча */
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(255, 0, 149);
+  opacity: 0;
+  animation: particleAnimation 0.5s linear forwards;
+}
+
+@keyframes particleAnimation {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(10px, -10px);
+  }
+}
+
+label[for="aiSwitch"] {
+  color: rgb(12, 234, 12);
+  font-size: 32px;
+  margin-left: 40px;
+  display: inline-block;
+}
+
+#aiSwitch {
+  margin-left: 20px;
+}
+
+#winMessage {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+#winText {
+  margin-bottom: 20px;
+}
+
+#restartButton {
+  font-size: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgb(12, 234, 12);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}

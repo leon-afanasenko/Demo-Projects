@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px 10px;
+  font-family: "Playwrite NG Modern", cursive;
+  background-image: url("Screenshot 2024-06-23 at 10.27.33.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+input {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid white#f0edcc;
+  width: 200px;
+  background-color: white(240, 237, 204, 0.8);
+  color: black;
+}
+
+li {
+  border: 2px solid #f0edcc;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #02343f;
+  cursor: pointer;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+li:hover {
+  background-color: rgba(240, 237, 204, 0.9);
+}
+
+li.blur {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+
+span.user-id {
+  font-weight: bold;
+}
+
+span.todo-text {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+span.status {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #02343f;
+}
+
+input:focus {
+  outline: none;
+  border-color: black;
+}
+
+.animate-up {
+  animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

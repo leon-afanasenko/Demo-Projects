@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic Tennis Court</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="score">
+      <span id="player1Score">0</span> - <span id="player2Score">0</span>
+    </div>
+    <div id="court">
+      <div class="net"></div>
+      <div class="player" id="player1">🧐</div>
+      <div class="player" id="player2">😠</div>
+      <div id="ball"></div>
+    </div>
+    <label for="aiSwitch">AI Enabled:</label>
+    <input type="checkbox" id="aiSwitch" checked />
+    <div id="winMessage">
+      <p id="winText">Win!</p>
+      <button id="restartButton">Restart Game</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

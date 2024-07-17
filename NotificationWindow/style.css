@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+body {
+  background-color: #f5f5dc;
+  color: #333;
+  background-image: url("marble-texture_(5).jpg");
+  background-size: cover;
+  filter: grayscale(1) blur(0px);
+  background-attachment: fixed;
+}
+
+.marble-element {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1) 10%,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.1) 30%
+  );
+  background-size: 200px 200px;
+  background-position: 0 0, 100px 100px;
+}
+
+nav {
+  width: 100%;
+  background-color: #800000;
+  height: 60px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  color: #fffff0;
+  border-bottom: 2px solid #ffd700;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  background-color: #800000;
+  width: 320px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s linear;
+  padding: 12px;
+  gap: 16px;
+  color: #fffff0;
+}
+
+.nav-menu--open {
+  transform: translateX(0%);
+  box-shadow: 4px 0px 4px 0px #00000080;
+}
+
+.nav-menu span {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.nav-menu__item {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #fffff0;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.nav-menu__item:hover {
+  background-color: black;
+}
+
+form {
+  width: 800px;
+  padding: 20px;
+  border: 1px solid #ffd700;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-color: #fffff0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: calc(50% - 10px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #800000;
+  color: #fffff0;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 300px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+form button:hover {
+  background-color: #500000;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.buttons button {
+  width: 400px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffd700;
+  color: #333;
+  font-weight: bold;
+}
+
+.buttons button:hover {
+  background-color: #daa520;
+}
+
+.buttons--hidden {
+  display: none;
+}
+
+.notifications-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.notification {
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.notification__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.notification__data {
+  flex: 1;
+}
+
+.notification__title {
+  font-weight: bold;
+}
+
+.notification__text {
+  font-size: 14px;
+}
+
+.notification__close {
+  cursor: pointer;
+}
+
+.notification--success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.notification--info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.notification--error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.notification--hidden {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.submenu {
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.submenu__item {
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submenu__item:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
